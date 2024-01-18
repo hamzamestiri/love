@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+*{
+    
+    box-sizing: border-box;
+    text-decoration: none;
+    color:black;
+    
+}
+
+body {
+       background-image:url("https://i.ibb.co/swK7zPR/istockphoto-1191251531-612x612.jpg"); 
+      background-size: 100%;
+      background-repeat:no-repeat;
+      overflow:hidden;
+}
+#content{
+	position: absolute;
+	top: 1%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: 20%;
+}
+
+#together{
+	font-size: 25px;
+	text-align: center;
+	color: black
+	;
+}
+
+#timer{
+	text-align: center;
+	color: black;
+}
+
+.container {
+  padding: 200px;
+  margin:200px;
+    height: 200px;
+    position: relative;  
+   
+}
+
+.center {
+ margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+
+.btn-primary {
+    background-color: red;
+    border-color: red;
+}
+
+button.btn.btn-primary {
+   
+
+  transform: translate(-50%, - 50%);
+  width: 200px;
+  height:75px;
+  background:#F8EAE1;
+  border-radius: 75px;
+  line-height: 75px;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Water Brush', cursive;
+  color:#E41E25;
+  box-shadow: 1px 2px black;
+}
+
+
+
+button.btn.btn-primary:first-child:hover{
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+  }
+  button.btn.btn-primary:last-child:hover{
+    background: linear-gradient(90deg, #fa7199, #f5ce62, #e43603, #fa7199);
+    background-size: 400%;
+
+
+}
+
+button.btn.btn-primary:first-child:before,
+button.btn.btn-primary:last-child:before{
+  content: '';
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+button.btn.btn-primary:first-child:hover:before,
+button.btn.btn-primary:last-child:hover:before{
+  opacity: 1;
+  z-index: -1;
+}
+button.btn.btn-primary:hover{
+  z-index: 1;
+  animation: glow 8s linear infinite;
+}
+@keyframes glow {
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 400%;
+  }
+}
+h5.modal-title {
+    padding-left: 164px;
+}
+
+
+
+.btn.btn-secondary::after {
+content: "Close";
+}
+.btn.btn-secondary:hover::after {
+ content: "🥺";
+ 
+}
+
+
+
+/* responsive media query start */
+
+
+@media (max-width: 890px) {
+  body{
+    background:  url("https://i.ibb.co/swK7zPR/istockphoto-1191251531-612x612.jpg");
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100% 120%;
+  background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 690px) {
+  body { 
+    background:  url("https://i.ibb.co/swK7zPR/istockphoto-1191251531-612x612.jpg");
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+   }
+  
+  html{
+    height: 100vh;
+  }
+}
+@media (max-width: 575px) {
+  .modal-body {
+  position: relative;
+  left: 4.6%;
+  }
+}
+@media (max-width: 523px) {
+  .modal-body {
+  position: relative;
+  left: 0.1%;
+  }
+}
